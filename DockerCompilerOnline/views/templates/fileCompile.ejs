@@ -1,0 +1,32 @@
+<div class="container">
+  <form id="direct" action="/code/file" enctype="multipart/form-data" method="post">
+
+    <br>
+    <div class="form-group">
+      <label for="language">Select Language</label>
+      <select class="form-control" id="language" name="language">
+        <option>C</option>
+        <option>C++</option>
+        <option>Python</option>
+        <option>Node JS</option>
+        <option>R</option>
+      </select>
+    </div>
+    <p class="h6" id='msg'></p>
+    <div class="input-group mb-3">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" name="file-to-upload" id="file-to-upload" multiple onChange="myFunction()">
+        <label class="custom-file-label" for="file-to-upload">Choose file</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <button type="submit" class="btn btn-primary col-sm-2" id="submitButtonFile" >Compile</button>
+      <div class="col-sm-1"></div>
+      <div id="loader2" style="display: none;"></div>
+    </div>
+
+  </form>
+  <br>
+  <div class="list-group" id="filesInfoGrid"></div>
+</div>
